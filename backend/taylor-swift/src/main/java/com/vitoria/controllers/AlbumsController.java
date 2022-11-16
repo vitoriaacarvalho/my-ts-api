@@ -18,7 +18,7 @@ import com.vitoria.models.TaylorsAlbums;
 import com.vitoria.service.AlbumsService;
 
 @RestController
-@RequestMapping("/taylorsalbums")
+@RequestMapping("/albums")
 public class AlbumsController {
 	
 	@Autowired

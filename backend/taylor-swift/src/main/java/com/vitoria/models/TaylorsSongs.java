@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 public class TaylorsSongs implements Serializable{
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 11L;
 	
 	@Column(name="song")
 	private String song;
