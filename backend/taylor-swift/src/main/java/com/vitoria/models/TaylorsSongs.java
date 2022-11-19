@@ -19,8 +19,8 @@ public class TaylorsSongs implements Serializable{
 	@Column(name="inspired_by_which_lover", nullable=true)
 	private String whoWasItAbout;
 	
-	@Column(name="taylors_album")
-	private TaylorsAlbums album;
+	@Column(name="taylors_album", nullable=false)
+	private String album;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class TaylorsSongs implements Serializable{
 		
 	}
 	
-	public TaylorsSongs(String song, String quote, String whoWasItAbout, TaylorsAlbums album, Integer songsId) {
+	public TaylorsSongs(String song, String quote, String whoWasItAbout, String album, Integer songsId) {
 		this.song = song;
 		this.quote = quote;
 		this.whoWasItAbout=whoWasItAbout;
@@ -65,11 +65,11 @@ public class TaylorsSongs implements Serializable{
 		this.whoWasItAbout = whoWasItAbout;
 	}
 
-	public TaylorsAlbums getAlbum() {
+	public String getAlbum() {
 		return album;
 	}
 
-	public void setAlbum(TaylorsAlbums album) {
+	public void setAlbum(String album) {
 		this.album = album;
 	}
 

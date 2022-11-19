@@ -1,5 +1,6 @@
 package com.vitoria.controllers;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,12 +14,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.vitoria.models.TaylorsAlbums;
 import com.vitoria.service.AlbumsService;
 
 @RestController
-@RequestMapping("/albums")
+@RequestMapping(value="/albums")
 public class AlbumsController {
 	
 	@Autowired
@@ -31,25 +33,27 @@ public class AlbumsController {
 		return ResponseEntity.ok().body(albums);
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping(value="/{id}")
 	public ResponseEntity<Optional<TaylorsAlbums>> findById(@PathVariable Integer id){
 		Optional<TaylorsAlbums> album=service.findById(id);
 		return ResponseEntity.ok().body(album);
 	}
 	
-	@PostMapping("/{id}")
+	@PostMapping(value="/{id}")
 	public ResponseEntity<TaylorsAlbums> insert(@RequestBody TaylorsAlbums album){
 		service.insert(album);
-		return ResponseEntity.ok().body(album);
+		URI uri=ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+				.buildAndExpand(album.getAlbumsId()).toUri();
+		return ResponseEntity.created(uri).body(album);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping(value="/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Integer id){
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping(value="/{id}")
 	public ResponseEntity<TaylorsAlbums> update(@PathVariable Integer id, @RequestBody TaylorsAlbums album){
 		album=service.update(id, album);
 		return ResponseEntity.ok().body(album);
