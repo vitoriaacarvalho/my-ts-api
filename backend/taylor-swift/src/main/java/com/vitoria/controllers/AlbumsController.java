@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,8 +20,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.vitoria.models.TaylorsAlbums;
 import com.vitoria.service.AlbumsService;
 
+import lombok.extern.log4j.Log4j2;
+
 @RestController
 @RequestMapping(value="/albums")
+@Log4j2
+@CrossOrigin(origins = "*")
 public class AlbumsController {
 	
 	@Autowired

@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,8 +20,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.vitoria.models.TaylorsSongs;
 import com.vitoria.service.SongsService;
 
+import lombok.extern.log4j.Log4j2;
+
 @RestController
 @RequestMapping(value="/songs")
+
+@Log4j2
 public class SongsController {
 
 	@Autowired
@@ -28,6 +33,7 @@ public class SongsController {
 	
 	
 	@GetMapping
+	@CrossOrigin(origins = "*")
 	public ResponseEntity<List<TaylorsSongs>> findAll(){
 		List<TaylorsSongs> songs=service.findAll();
 		return ResponseEntity.ok().body(songs);

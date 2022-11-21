@@ -7,6 +7,16 @@ function App() {
   const songs = async () => {
     try{
       const response = await api.get("/songs");
+      console.log(response);
+    }
+    catch(err) {
+      console.error(err);
+    }
+  };
+  const  recommendations= async () => {
+    try{
+      const response = await api.get("/albums");
+      console.log(response);
     }
     catch(err) {
       console.error(err);
@@ -19,7 +29,7 @@ function App() {
                 <button type="submit" className="quote-bttn" onClick={songs}>
                     FIND ME A QUOTE
                 </button>
-                <button type="submit" className="recommend-bttn">
+                <button type="submit" className="recommend-bttn" onClick={recommendations}>
                     GET ME A RECOMMENDATION
                 </button>
              </main>
