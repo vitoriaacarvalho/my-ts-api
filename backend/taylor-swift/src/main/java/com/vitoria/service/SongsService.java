@@ -11,12 +11,17 @@ import org.springframework.stereotype.Service;
 import com.vitoria.models.TaylorsSongs;
 import com.vitoria.repositories.SongsRepository;
 import com.vitoria.service.exceptions.ResourceNotFoundException;
+import com.vitoria.utils.ShuffleNumbers;
 
 @Service
 public class SongsService {
 	
 	@Autowired
 	private SongsRepository repo;
+	
+	@Autowired
+	private ShuffleNumbers shuffle;
+	
 	
 	public List<TaylorsSongs> findAll(){
 		return repo.findAll();
@@ -50,7 +55,10 @@ public class SongsService {
 		entity.setSong(song.getSong());
 	}
 	
-	
+	public String getMeAQuote() {
+		TaylorsSongs song=repo.findById(shuffle.shuffle()).get();
+		return song.getQuote();
+	}
 	
 	
 }

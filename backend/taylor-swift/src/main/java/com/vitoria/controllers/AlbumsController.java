@@ -63,4 +63,11 @@ public class AlbumsController {
 		album=service.update(id, album);
 		return ResponseEntity.ok().body(album);
 	}
+	
+	@GetMapping(value="/recommendations")
+	public ResponseEntity<String> getMeARecommendation(){
+		String song=service.getMeASong();
+		return ResponseEntity.ok().body(song);
+	}
+
 }

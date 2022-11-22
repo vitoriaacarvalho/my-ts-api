@@ -64,4 +64,23 @@ public class SongsController {
 		song=service.update(id, song);
 		return ResponseEntity.ok().body(song);
 	}
+	
+	@GetMapping(value="/quotes")
+	public String getQuotes() {
+		String quote=service.getMeAQuote();
+		return quote;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

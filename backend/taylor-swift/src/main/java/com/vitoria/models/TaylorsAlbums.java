@@ -41,7 +41,7 @@ public class TaylorsAlbums implements Serializable {
 		this.album = album;
 	}
 
-	public String getsongRecommendation() {
+	public String getSongRecommendation() {
 		return songRecommendation;
 	}
 
