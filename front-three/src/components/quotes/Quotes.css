@@ -13,7 +13,7 @@ main {
     box-shadow: 5px 2px 6px 5px rgba(159, 34, 190, 0.271);
 }
 
-.song-box {
+.quote-box { /* tudo bem*/
     background-color: #f7c3dcc1;
     height: 300px;
     width: 500px;
@@ -23,39 +23,78 @@ main {
     margin-top: -45px;
     margin-left:24px;
 }
-.again-a{
+.go-back-bttn{
     background-color: #63c69687;
     height:68px;
-    width:193px;
+    width:178px;
     border: 2px solid #8615bb2d;
     border-radius: 25px 15px;
     display: block;
     margin-left: auto;
-    margin-right: 87px;
+    margin-right: 85px;
     margin-top: -23px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
+    font-size: medium;
     text-decoration:none;
 }
+
 .recommendations-bttn{
     background-color: #63c69687;
     height:68px;
-    width:193px;
+    width:178px;
     border: 2px solid #8615bb2d;
     border-radius: 15px 25px;
     display: block;
     margin-left: auto;
-    margin-right: 287px;
+    margin-right: 295px;
     margin-top: -71px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
+    font-size: medium;
     text-decoration:none;
 }
-.recommendation{
-    white-space: inherit;
+.go-back-p{
+    margin-left: 50px;
+    font-size: medium;
     margin-top: 23px;
-    margin-left: 1%;
 }
-.again-p{
+.recommendations{
     margin-top: 23px;
+    margin-left: 3px;
+    font-size: medium;
+}
+.thebox{
+    background-color:  #f7c3dc00;
+    margin:auto;
+    margin-top: -50px;
+    margin-right: 350px;
+    display:grid;
+    justify-content: center;
+    width: 70%;
+    padding: 10px;
+}
+.quote{
+    background-color: #f7c3dc00;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    white-space: 10px;
+    color: #6e1e679b;
+    width:70%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.h3{
+    margin:auto;
+    display: block;
+    justify-content: center;
+    color:#6e1e679b;
+    padding-top: 14px;
+}
+.h6{
+    margin:auto;
+    margin-top: 20px;
+    display: block;
+    justify-content: center;
+    color:#6e1e679b;
+    font-size: medium;
 }

@@ -26,10 +26,10 @@ INSERT INTO `TAYLORS_ALBUMS` (`ALBUM`, `SONG_RECOMMENDATION`)
 VALUES ('Evermore', 'tis the damn season + dorothea (they are about the same story)');
 
 INSERT INTO `TAYLORS_ALBUMS` (`ALBUM`, `SONG_RECOMMENDATION`)
-VALUES ('Red Taylor`s Version', 'All Too Well 10 Minute Version (Taylor`s Version');
+VALUES ('Red TV', 'All Too Well 10 Min TV');
 
 INSERT INTO `TAYLORS_ALBUMS` (`ALBUM`, `SONG_RECOMMENDATION`)
-VALUES ('Fearless Taylor`s Version', 'White Horse');
+VALUES ('Fearless TV', 'White Horse');
 
 INSERT INTO `TAYLORS_ALBUMS` (`ALBUM`, `SONG_RECOMMENDATION`)
 VALUES ('Reputation', 'Look What You Made Me Do');
@@ -54,7 +54,7 @@ And you`d be standin` in my front porch light
 And I knew you`d come back to me', 'Folklore');
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('All Too Well 10 Minute Version', 'You kept me like a secret, but I kept you like an oath', 'Jake Gyllenhaal', 'Red Taylor`s Version');
+VALUES ('All Too Well', 'You kept me like a secret, but I kept you like an oath', 'Jake Gyllenhaal', 'Red TV');
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
 VALUES ('Dorothea', 'You`re a queen
@@ -62,132 +62,76 @@ Selling dreams
 Selling make up and magazines
 Ooh, from you I`d buy anything', 'Evermore');
 
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('Mr Perfectly Fine', 'Goodbye Mr. "Perfectly fine"
-How`s your heart after breakin` mine?
-Mr. "Always at the right place at the right time"', 'Joe Jonas', 'Fearless Taylor`s Version');
 
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
 VALUES ('Vigilante Shit', 'Draw the cat eye sharp enough to kill a man', 'Midnights');
 
 
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('Back To December', 'So this is me swallowin` my pride
-Standin` in front of you sayin` I`m sorry for that night
-And I go back to December all the time', 'Taylor Lautner', 'Speak Now');
-
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('Mastermind', 'What if I told you none of it was accidental
-And the first night that you saw me, nothing was gonna stop me?', 'Joe Alwyn', 'Midnights');
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('Lover', 'Ladies and gentlemen, will you please stand?
-With every guitar string scar on my hand
-I take this magnetic force of a man to be my lover', 'Joe Alwyn', 'Lover');
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('hoax', 'You knew you won, so what`s the point of keeping score?
-You knew it still hurts underneath my scars
-From when they pulled me apart
-But what you did was just as dark
-Darling, this was just as hard', 'Karlie Kloss', 'Folklore');
+VALUES ('Paper Rings', 'I like shiny things but I`d marry you with paper rings', 'Joe Alwyn', 'Lover');
 
 
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
-VALUES ('You`re On Your Own Kid', 'I didn`t choose this town
-I dream of getting out
-There`s just one who could make me stay
-All my days', 'Midnights');
-
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('King Of My Heart', 'Is this the end of all the endings?
-My broken bones are mending
-With all these nights we`re spending
-Up on the roof with a school girl crush', 'Joe Alwyn', 'Reputation');
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
-VALUES ('Anti-Hero', 'I have this dream my daughter in-law kills me for the money
-She thinks I left them in the will
-The family gathers around and reads it and then someone screams out
-She`s laughing up at us from hell', 'Midnights');
-
-
-
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('Getaway Car', 'I`m in a getaway car
-I left you in a motel bar
-Put the money in a bag and I stole the keys
-That was the last time you ever saw me ', 'Tom Hiddleston', 'Reputation');
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('Clean', 'You`re still all over me
-Like a wine-stained dress I can`t wear anymore', 'Harry Styles', '1989');
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
-VALUES ('Look What You Made Me Do', 'I`m sorry
-But the old Taylor can`t come to the phone right now
-Why? Oh, `cause she`s dead`', '1989');
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('The Great War', 'All that bloodshed, crimson clover
-, the bombs were close and
-My hand was the one you reached for
-All throughout the Great War', 'Joe Alwyn', 'Midnights');
-
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('Dress', 'Say my name and everything just stops
-I don`t want you like a best friend', 'Joe Alwyn', 'Reputation');
+VALUES ('The Lakes', 'Take me to the lakes where all the poets went to die', 'Midnights');
 
 
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
-VALUES ('The Man', 'I`m so sick of running as fast as I can
-Wondering if I`d get there quicker
-If I was a man', 'Lover');
+VALUES ('Marjorie', 'Should`ve kept every grocery store receipt `cause every scrap of you would be taken from me', 'Evermore');
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
+VALUES (' Anti-Hero', 'I have this dream my daughter in-law kills me for the money she thinks I left them in the will', 'Midnights');
+
+
 
 
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('London Boy', 'He likes my American smile
-Like a child when our eyes meet, darling, I fancy you', 'Joe Alwyn', 'Lover');
-
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
-VALUES ('The Lucky One', 'It was a few years later, I showed up here
-And they still tell the legend of how you disappeared
-How you took the money and your dignity and got the hell out
-They say you bought a bunch of land somewhere
-Chose the Rose Garden over Madison Square
-And it took some time, but I understand it now', 'Red Taylor`s Version');
-
-
-
-INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
-VALUES ('Nothing New feat Phoebe Bridges', 'They tell you while you`re young
-`Girls, go out and have your fun`
-Then they hunt and slay the ones who actually do it', 'Red Taylor`s Version');
+VALUES ('Getaway Car', 'I`m in a getaway car I left you in a motel bar', 'Tom Hiddleston', 'Reputation');
 
 
 INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
-VALUES ('I Bet You Think About Me', 'Mr. Superior-Thinking
-Do you have all the space that you need?
-I don`t have to be your shrink to know that you`ll never be happy
-And I bet you think about me', 'Jake Gyllenhaal', 'Red Taylor`s Version');
+VALUES ('Clean', 'You`re still all over me like a wine-stained dress I can`t wear anymore', 'Harry Styles', '1989');
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
+VALUES ('Begin Again', 'I`ve been spending the last eight months thinking all love ever does is break and burn, and end', 'Red TV');
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
+VALUES ('Mirrorball', 'I`m still trying everything to keep you looking at me', 'Folklore');
+
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
+VALUES ('So It Goes', 'You did a number on me but honestly, baby, who`s counting?', 'Joe Alwyn', 'Reputation');
+
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
+VALUES ('The Man', 'I`m so sick of running as fast as I can wondering if I`d get there quicker If I was a man', 'Lover');
+
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`, `INSPIRED_BY_WHICH_LOVER`,`TAYLORS_ALBUM`)
+VALUES ('London Boy', 'He likes my American smile like a child when our eyes meet', 'Joe Alwyn', 'Lover');
+
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
+VALUES ('The Lucky One', 'And they still tell the legend of how you disappeared how you took the money and your dignity and got the hell out ', 'Red TV');
+
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
+VALUES ('Nothing New', 'They tell you while you`re young `girls, go out and have your fun` then they hunt and slay the ones who actually do it', 'Red TV');
+
+
+INSERT INTO `TAYLORS_SONGS` (`SONG`, `QUOTE`,`TAYLORS_ALBUM`)
+VALUES ('Happiness', 'I can`t make it go away by making you a villain I guess it`s the price I pay for seven years in Heaven', 'Evermore');
 
 
 

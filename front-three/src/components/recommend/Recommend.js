@@ -16,11 +16,12 @@ function Recommend() {
   const songName= song.map((song, index) => {
     return(
       <>
-      <div className="teste">
+      <div className="box">
         <h1 className='h1'>{song.song}</h1>
-      </div>
+      
         
         <h3 className='h3'>{song.album}</h3>
+      </div>
       </>
     )
   });
@@ -34,10 +35,10 @@ function Recommend() {
       <main className="central-div">
                 <h2>Taylor's Songs</h2>
                 <div className="song-box">
-                  <p className='song-name'>{songName[getRandomInt(22)]}</p>
+                  <p className='song-name'>{songName[getRandomInt(18)]}</p>
                 </div>
                 <a href="/" className="again-a">
-                  <p className="again-p">TRY AGAIN</p>
+                  <p className="again-p">GO BACK</p>
                 </a>
                 <a href="/quotes" className="quotes-bttn">
                   <p className="quotes">QUOTES</p>
