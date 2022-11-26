@@ -2,9 +2,9 @@ import './Quotes.css';
 import api from '../../Utils/Api';
 
 function Quotes() {
-  const songs = async () => {
+  const  recommendations= async () => {
     try{
-      const response = await api.get("/songs");
+      const response = await api.get("/recommendations");
       console.log(response);
     }
     catch(err) {

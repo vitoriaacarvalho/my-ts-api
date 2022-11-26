@@ -1,23 +1,40 @@
 import './Recommend.css';
-import api from '../../Utils/Api';
-
-const  recommendations= async () => {
-    try{
-      const response = await api.get("/recommendations");
-      console.log(response);
-    }
-    catch(err) {
-      console.error(err);
-    }
-  };
+import React from 'react';
+import axios from 'axios';
 
 function Recommend() {
+ 
+  const[song,setSong]= React.useState([]);
+
+  React.useEffect(()=>{
+    axios.get("http://localhost:8080/songs").then((response)=>{
+      setSong(response.data);
+    });
+  }, []);
+  if (!song) return null;
+
+  const songName= song.map((song, index) => {
+    return(
+      <>
+      <div className="teste">
+        <h1 className='h1'>{song.song}</h1>
+      </div>
+        
+        <h3 className='h3'>{song.album}</h3>
+      </>
+    )
+  });
+
+ function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+}
+
   return (
     <>
       <main className="central-div">
                 <h2>Taylor's Songs</h2>
                 <div className="song-box">
-                  
+                  <p className='song-name'>{songName[getRandomInt(22)]}</p>
                 </div>
                 <a href="/" className="again-a">
                   <p className="again-p">TRY AGAIN</p>
@@ -25,11 +42,8 @@ function Recommend() {
                 <a href="/quotes" className="quotes-bttn">
                   <p className="quotes">QUOTES</p>
                 </a>
-
       </main>
-    </>
-
-    
+    </> 
   );
 }
 
