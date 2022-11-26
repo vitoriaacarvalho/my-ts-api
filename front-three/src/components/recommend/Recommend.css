@@ -54,10 +54,13 @@ main {
 }
 .again-p{
     margin-left: 50px;
+    margin-top: 23px;
+    color: #6e1e679b;
 }
 .quotes{
     margin-top: 23px;
-    margin-left: 51px;
+    margin-left: 31px;
+    color: #6e1e679b;
 }
 .box{
     background-color: #f7c3dc00;

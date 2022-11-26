@@ -39,7 +39,7 @@ function Quotes() {
                 <a href="/" className="go-back-bttn">
                   <p className="go-back-p">GO BACK</p>
                 </a>
-                <a href="/quotes" className="recommendations-bttn">
+                <a href="/recommendations" className="recommendations-bttn">
                   <p className="recommendations">RECOMMENDATIONS</p>
                 </a>
       </main>
