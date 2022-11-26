@@ -12,7 +12,7 @@ function Home() {
                   <p className="quote">FIND ME A QUOTE</p>
                 </a>
                 <a href="/recommendations" className="recommend-bttn">
-                    <p className="recommend">GET ME A RECOMMENDATION</p>
+                    <p className="recommend">RECOMMENDATION</p>
                 </a>
              </main>
         </div>

@@ -9,7 +9,7 @@
     margin-right: auto;
     margin-top: -30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-size: 20px;
     text-decoration:none;
   }
   .recommend-bttn{
@@ -22,6 +22,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
     text-decoration:none;
   }
   p{
@@ -32,12 +34,19 @@
   }
   .quote{
     margin-top: 14%;
-    margin-left: 22%;
+    margin-left: 19%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration:none;
+    color:#6e1e679b;
   }
   .recommend{
-    white-space: inherit;
     margin-top: 14%;
-    margin-left: 1%;
+    margin-left: 17%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration:none;
+    color:#6e1e679b;
   }
   .recommend-bttn:hover{
     background-color:#80e5ddab;
