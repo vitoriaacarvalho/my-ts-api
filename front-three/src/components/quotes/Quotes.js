@@ -17,7 +17,7 @@ function Quotes() {
     return(
       <>
       <div className='thebox'>
-        <p className='quote'>{song.quote}</p>
+        <p className='quotes'>{song.quote}</p>
         <h3 className='h3'>{song.song}</h3>
         <h6 className='h6'>{song.whoWasItAbout}</h6>
       </div>
