@@ -1,4 +1,4 @@
-main{
+main {
     background-color: #F4B2FF;
     height: 379px;
     width: 551px;
@@ -11,4 +11,47 @@ main{
     border: 2px solid #8615bb2d;
     border-radius: 35px;
     box-shadow: 5px 2px 6px 5px rgba(159, 34, 190, 0.271);
-  }
+}
+
+.song-box {
+    background-color: #f7c3dcc1;
+    height: 300px;
+    width: 500px;
+    border: 2px solid #8615bb0f;
+    border-radius: 18px 13px;
+    box-shadow: 8px 3px 7px 3px rgba(29, 156, 137, 0.077);
+    margin-top: -45px;
+    margin-left:24px;
+}
+.again-a{
+    background-color: #63c69687;
+    height:68px;
+    width:178px;
+    border: 2px solid #8615bb2d;
+    border-radius: 25px 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: 85px;
+    margin-top: -23px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    text-decoration:none;
+}
+.quotes-bttn{
+    background-color: #63c69687;
+    height:68px;
+    width:178px;
+    border: 2px solid #8615bb2d;
+    border-radius: 15px 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: 295px;
+    margin-top: -71px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    text-decoration:none;
+}
+.quotes{
+    margin-top: 23px;
+    margin-left: 51px;
+}

@@ -12,10 +12,21 @@ function Quotes() {
     }
   };
   return (
-    <div className="socorro">
-       <h1>testing</h1>
-    </div>
-    
+    <>
+      <main className="central-div">
+              <h2>Taylor's Songs</h2>
+              <div className="song-box">
+                
+              </div>
+              <a href="/" className="again-a">
+                <p className="again-p">TRY AGAIN</p>
+              </a>
+              <a href="/recommendations" className="recommendations-bttn">
+                <p className="recommendation">RECOMMENDATIONS</p>
+              </a>
+
+      </main>
+    </>
   );
  
 }

@@ -1,19 +1,11 @@
 import './Home.css';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Quotes from '../quotes/Quotes.js'
 import Recommend from '../recommend/Recommend.js'
 
 function Home() {
 
   return (
-     <div className="all-page"> 
-        <Router>
-            <Routes>
-              <Route path="/quotes" element={<Quotes/>}/>
-              <Route path="/recommendations" element={<Recommend/>}/>
-            </Routes>
-        </Router>
-    
+     <div className="all-page">    
              <main className="central-div">
                 <h2>Taylor's Songs</h2>
                 
