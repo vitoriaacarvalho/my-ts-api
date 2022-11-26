@@ -14,7 +14,7 @@ const  recommendations= async () => {
 function RecommendationPage() {
   return (
     <div className="test">
-         <h1>oi</h1>
+         <h1>this should be the recommendation page!</h1>
     </div>
     
   );

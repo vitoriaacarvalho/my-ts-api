@@ -1,7 +1,7 @@
-import './QuotePage.css';
-import api from './api.js';
+import './Quotes.css';
+import api from '../../Utils/Api';
 
-function QuotePage() {
+function Quotes() {
   const songs = async () => {
     try{
       const response = await api.get("/songs");
@@ -12,9 +12,12 @@ function QuotePage() {
     }
   };
   return (
-     <h1>testing</h1>
+    <div className="socorro">
+       <h1>testing</h1>
+    </div>
+    
   );
  
 }
 
-export default QuotePage;
+export default Quotes;

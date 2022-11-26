@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import QuotePage from './QuotePage.js'
-import RecommendationPage from './RecommendationPage.js'
+import QuotePage from './/Components/QuotePage.js'
+import RecommendationPage from './/Components/RecommendationPage.js'
 
 function App() {
 
@@ -14,16 +14,8 @@ function App() {
         </Routes>
       
     </Router>
-             <main className="central-div">
-                <h2>Taylor's Songs</h2>
-                
-                <a href="/quotes" className="quote-bttn">
-                  FIND ME A QUOTE
-                </a>
-                <a href="/recommendations" className="recommend-bttn">
-                    GET ME A RECOMMENDATION
-                </a>
-             </main>
+      
+      
         </div>
   );
   
