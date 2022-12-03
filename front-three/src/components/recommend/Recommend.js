@@ -28,7 +28,7 @@ function Recommend() {
 
  function getRandomInt(max) {
       return Math.floor(Math.random() * max);
-}
+ }
 
   return (
     <>

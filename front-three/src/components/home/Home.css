@@ -69,3 +69,35 @@
     justify-content: center;
     color:#6e1e679b;
   }
+
+  .playlist{
+    margin-top: 12%;
+    margin-left: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-decoration:none;
+    color:#6e1e679b;
+    text-align: center;
+  }
+  .playlist-bttn:hover{
+    background-color: #fbafe5b0;
+    height:60px;
+    width:165px;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.243);
+  }
+  .playlist-bttn{
+    background-color: #eb96d288;
+    height:58px;
+    width:158px;
+    border: 2px solid #8615bb2d;
+    border-radius: 10px 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration:none;
+    
+  }
+ 
