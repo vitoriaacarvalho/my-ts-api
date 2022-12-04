@@ -83,4 +83,12 @@ public class TaylorsSongs implements Serializable{
 	public void setSongsId(Integer songsId) {
 		this.songsId = songsId;
 	}
+
+	public String getSongUrl() {
+		return songUrl;
+	}
+
+	public void setSongUrl(String songUrl) {
+		this.songUrl = songUrl;
+	}
 }

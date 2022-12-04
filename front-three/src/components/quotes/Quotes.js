@@ -45,7 +45,7 @@ function Quotes() {
                 {songs.map((song,index) => {
                   return(
                     <>
-                         <a className="link" href={song.songUrl}>SEE ON SPOTIFY</a>
+                         <a className="link" href={song.songUrl[getRandomInt(18)]}>SEE ON SPOTIFY</a>
                     </>
                   )})}
                   

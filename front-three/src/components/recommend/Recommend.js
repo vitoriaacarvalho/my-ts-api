@@ -2,6 +2,7 @@ import './Recommend.css';
 import React from 'react';
 import axios from 'axios';
 
+
 function Recommend() {
  
   const[song,setSong]= React.useState([]);
@@ -43,6 +44,10 @@ function Recommend() {
                 <a href="/quotes" className="quotes-bttn">
                   <p className="quotes">QUOTES</p>
                 </a>
+                <a href="/recommendations" className="refresh-bttn">
+                  <img src="Refresh_icon.png" className="refresh"/>
+                </a>
+                
       </main>
     </> 
   );
