@@ -22,7 +22,8 @@ public class TaylorsAlbums implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "albums_id")
 	private Integer albumsId;
-
+	
+	
 	public TaylorsAlbums() {
 
 	}
@@ -57,4 +58,9 @@ public class TaylorsAlbums implements Serializable {
 		this.albumsId = albumsId;
 	}
 
+	public void setSongRecommendation(String songRecommendation) {
+		this.songRecommendation = songRecommendation;
+	}
+
+	
 }

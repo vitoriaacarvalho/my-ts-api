@@ -27,6 +27,9 @@ public class TaylorsSongs implements Serializable{
 	@Column(name="songs_id")
 	private Integer songsId;
 	
+	@Column(name="song_url")
+	private String songUrl;
+	
 	
 	public TaylorsSongs() {
 		

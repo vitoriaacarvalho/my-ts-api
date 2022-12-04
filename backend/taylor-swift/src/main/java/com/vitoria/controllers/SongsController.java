@@ -1,6 +1,6 @@
 package com.vitoria.controllers;
 
-import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,63 +15,68 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.vitoria.models.TaylorsSongs;
-import com.vitoria.service.SongsService;
+import com.vitoria.repositories.SongsRepository;
+import com.vitoria.utils.ShuffleNumbers;
 
 import lombok.extern.log4j.Log4j2;
 
 @RestController
 @RequestMapping(value="/songs")
-
+@CrossOrigin(origins = "*")
 @Log4j2
 public class SongsController {
 
 	@Autowired
-	private SongsService service;
-	
+	private SongsRepository repo;
+	@Autowired
+	private ShuffleNumbers shuffle;
 	
 	@GetMapping
-	@CrossOrigin(origins = "*")
-	public ResponseEntity<List<TaylorsSongs>> findAll(){
-		List<TaylorsSongs> songs=service.findAll();
-		return ResponseEntity.ok().body(songs);
+	public List<TaylorsSongs> findAll(){
+		return repo.findAll();
 	}
 	
-	@GetMapping(value="/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Optional<TaylorsSongs>> findById(@PathVariable Integer id){
-		Optional<TaylorsSongs> song=service.findById(id);
+		Optional<TaylorsSongs> song=repo.findById(id);
 		return ResponseEntity.ok().body(song);
 	}
 	
-	@PostMapping(value="/{id}")
-	public ResponseEntity<TaylorsSongs> insert(@RequestBody TaylorsSongs song){
-		service.insert(song);
-		URI uri=ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(song.getSongsId()).toUri();
-		return ResponseEntity.created(uri).body(song);
+	@PostMapping
+	public TaylorsSongs insert(@RequestBody TaylorsSongs song){
+		return repo.save(song);
 	}
 	
-	@DeleteMapping(value="/{id}")
+	@PutMapping("/{id}")
+	public ResponseEntity<TaylorsSongs> update(@PathVariable Integer id, @RequestBody TaylorsSongs song){
+		TaylorsSongs updatedSong=song;
+		updatedSong.setSong(song.getSong());
+		updatedSong.setQuote(song.getQuote());
+		updatedSong.setWhoWasItAbout(song.getWhoWasItAbout());
+		updatedSong.setAlbum(song.getAlbum());
+		updatedSong=repo.save(updatedSong);
+		return ResponseEntity.ok().body(updatedSong);
+	}
+	
+	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Integer id){
-		service.delete(id);
+		repo.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
 	
-	@PutMapping(value="/{id}")
-	public ResponseEntity<TaylorsSongs> update(@PathVariable Integer id, @RequestBody TaylorsSongs song){
-		song=service.update(id, song);
-		return ResponseEntity.ok().body(song);
+	public String getMeAQuote() {
+		TaylorsSongs song=repo.findById(shuffle.shuffle()).get();
+		return song.getQuote();
 	}
 	
-	@GetMapping(value="/quotes")
-	public String getQuotes() {
-		String quote=service.getMeAQuote();
-		return quote;
+	@GetMapping(value="/quotes/{id}")
+	public ResponseEntity<String> getQuotes() {
+		TaylorsSongs song=repo.findById(shuffle.shuffle()).get();
+		String quote=song.getQuote();
+		return ResponseEntity.ok().body(quote);
 	}
-	
-	
 	
 	
 	

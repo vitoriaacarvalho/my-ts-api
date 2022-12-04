@@ -1,6 +1,5 @@
 package com.vitoria.controllers;
 
-import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,10 +14,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.vitoria.models.TaylorsAlbums;
-import com.vitoria.service.AlbumsService;
+import com.vitoria.repositories.AlbumsRepository;
+import com.vitoria.utils.ShuffleNumbers;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -29,45 +28,45 @@ import lombok.extern.log4j.Log4j2;
 public class AlbumsController {
 	
 	@Autowired
-	private AlbumsService service;
-	
+	private AlbumsRepository repo;
+	@Autowired
+	private ShuffleNumbers shuffle;
 	
 	@GetMapping
-	public ResponseEntity<List<TaylorsAlbums>> findAll(){
-		List<TaylorsAlbums> albums=service.findAll();
-		return ResponseEntity.ok().body(albums);
+	public List<TaylorsAlbums> findAll(){
+		return repo.findAll();
 	}
 	
-	@GetMapping(value="/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Optional<TaylorsAlbums>> findById(@PathVariable Integer id){
-		Optional<TaylorsAlbums> album=service.findById(id);
+		Optional<TaylorsAlbums> album=repo.findById(id);
 		return ResponseEntity.ok().body(album);
 	}
 	
-	@PostMapping(value="/{id}")
-	public ResponseEntity<TaylorsAlbums> insert(@RequestBody TaylorsAlbums album){
-		service.insert(album);
-		URI uri=ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(album.getAlbumsId()).toUri();
-		return ResponseEntity.created(uri).body(album);
+	@PostMapping
+	public TaylorsAlbums insert(@RequestBody TaylorsAlbums album){
+		return repo.save(album);
 	}
 	
-	@DeleteMapping(value="/{id}")
+	@PutMapping("/{id}")
+	public ResponseEntity<TaylorsAlbums> update(@PathVariable Integer id, @RequestBody TaylorsAlbums album){
+		TaylorsAlbums updatedAlbum=album;
+		updatedAlbum.setAlbum(album.getAlbum());
+		updatedAlbum.setSongRecommendation(album.getSongRecommendation());
+		updatedAlbum=repo.save(updatedAlbum);
+		return ResponseEntity.ok().body(updatedAlbum);
+	}
+	
+	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Integer id){
-		service.delete(id);
+		repo.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
 	
-	@PutMapping(value="/{id}")
-	public ResponseEntity<TaylorsAlbums> update(@PathVariable Integer id, @RequestBody TaylorsAlbums album){
-		album=service.update(id, album);
-		return ResponseEntity.ok().body(album);
-	}
-	
 	@GetMapping(value="/recommendations")
-	public ResponseEntity<String> getMeARecommendation(){
-		String song=service.getMeASong();
+	public ResponseEntity<String> getMeARecommendation() {
+		TaylorsAlbums album=repo.findById(shuffle.shuffle()).get();
+		String song=album.getSongRecommendation();
 		return ResponseEntity.ok().body(song);
 	}
-
 }

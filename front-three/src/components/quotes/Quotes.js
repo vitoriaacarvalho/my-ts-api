@@ -8,7 +8,7 @@ function Quotes() {
 
   React.useEffect(()=>{
     axios.get("http://localhost:8080/songs").then((response)=>{
-      setSong(response.data);
+      console.log(response.data);
     });
   }, []);
   if (!song) return null;
@@ -22,6 +22,11 @@ function Quotes() {
         <h6 className='h6'>{song.whoWasItAbout}</h6>
       </div>
       </>
+    )
+  });
+  const song_url=song.map((song,index)=> {
+    return(
+      <p className="link">{song.songUrl}</p>
     )
   });
 
@@ -41,6 +46,9 @@ function Quotes() {
                 </a>
                 <a href="/recommendations" className="recommendations-bttn">
                   <p className="recommendations">RECOMMENDATIONS</p>
+                </a>
+                <a href={song_url} className="spotify-bttn">
+                  <p className="spotify">SEE ON SPOTIFY</p>
                 </a>
       </main>
     </> 
