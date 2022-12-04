@@ -18,9 +18,7 @@ function Recommend() {
     return(
       <>
       <div className="box">
-        <h1 className='h1'>{song.song}</h1>
-      
-        
+        <a href={song.songUrl} target="_blank" className="spotify-link"><h1 className='h1'>{song.song}</h1></a>
         <h3 className='h3'>{song.album}</h3>
       </div>
       </>

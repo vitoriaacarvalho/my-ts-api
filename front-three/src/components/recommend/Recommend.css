@@ -37,6 +37,13 @@ main {
     font-size: medium;
     text-decoration:none;
 }
+.again-a:hover{
+    background-color: #80e5ddab;
+    height:70px;
+    width:180px;
+    align-items: center;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.243);
+}
 
 .quotes-bttn{
     background-color: #63c69687;
@@ -51,6 +58,13 @@ main {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: medium;
     text-decoration:none;
+}
+.quotes-bttn:hover{
+    background-color: #80e5ddab;
+    height:70px;
+    width:180px;
+    align-items: center;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.243);
 }
 .again-p{
     margin-left: 50px;
@@ -111,4 +125,14 @@ main {
     height:40px;
     width:44px;
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.267);
+}
+.spotify-link{
+    text-decoration: none;
+}
+.h1:hover{
+    font-size: 40px;
+
+}
+.h3:hover{
+    color: #6e1e679b;
 }

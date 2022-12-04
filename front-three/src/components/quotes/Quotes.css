@@ -37,6 +37,13 @@ main {
     font-size: medium;
     text-decoration:none;
 }
+.go-back-bttn:hover{
+    background-color: #80e5ddab;
+    height:70px;
+    width:180px;
+    align-items: center;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.243);
+}
 
 .recommendations-bttn{
     background-color: #63c69687;
@@ -51,6 +58,14 @@ main {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: medium;
     text-decoration:none;
+    align-items: center;
+}
+.recommendations-bttn:hover{
+    background-color: #80e5ddab;
+    height:70px;
+    width:180px;
+    align-items: center;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.243);
 }
 .go-back-p{
     margin-left: 50px;
@@ -84,11 +99,15 @@ main {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .h3{
-    margin:auto;
+    margin: auto;
     display: block;
     justify-content: center;
     color:#6e1e679b;
     padding-top: 14px;
+    padding-right: 8%;
+}
+.h3:hover{
+    font-size: 23px;
 }
 .h6{
     margin:auto;
@@ -97,6 +116,7 @@ main {
     justify-content: center;
     color:#6e1e679b;
     font-size: medium;
+    padding-right: 8%;
 }
 .quote-name{
     text-align: center;
@@ -116,18 +136,30 @@ main {
     text-decoration:none;
 }
 
-.spotify-bttn:hover{
-    background-color: #fbafe5b0;
-    height:60px;
-    width:165px;
-    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.243);
+.spotifyUrl{
+    text-decoration: none;
 }
-.spotify{
-    margin-top: 12%;
-    margin-left: 2%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
-    text-decoration:none;
-    color:#6e1e679b;
-    text-align: center;
+
+.refresh{
+    height: 28px;
+    justify-content: center;
+    display: flex;
+}
+.refresh-bttn{
+    background-color:#ff75d37c ;
+    height:38px;
+    width:42px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-left:45.5%;
+    border-radius: 200px;
+    align-items: center;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.267);
+}
+.refresh-bttn:hover{
+    background-color:#ff8ada8a ;
+    height:40px;
+    width:44px;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.267);
 }

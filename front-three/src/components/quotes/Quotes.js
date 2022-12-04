@@ -19,7 +19,7 @@ function Quotes() {
       <>
       <div className='thebox'>
         <p className='quotes'>{song.quote}</p>
-        <h3 className='h3'>{song.song}</h3>
+        <a href={song.songUrl} target="_blank" className="spotifyUrl"><h3 className='h3'>{song.song}</h3></a> 
         <h6 className='h6'>{song.whoWasItAbout}</h6>
       </div>
       </>
@@ -42,12 +42,9 @@ function Quotes() {
                 <a href="/recommendations" className="recommendations-bttn">
                   <p className="recommendations">RECOMMENDATIONS</p>
                 </a>
-                {songs.map((song,index) => {
-                  return(
-                    <>
-                         <a className="link" href={song.songUrl[getRandomInt(18)]}>SEE ON SPOTIFY</a>
-                    </>
-                  )})}
+                <a href="/quotes" className="refresh-bttn">
+                  <img src="Refresh_icon.png" className="refresh"/>
+                </a>
                   
                 
       </main>
