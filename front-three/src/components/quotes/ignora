@@ -1,0 +1,8 @@
+  <{(()=> song.map((song,index)=> {
+                    return(
+                         <a className="link">{song.songUrl}>
+                         
+                         </a>
+                      )}) )} 
+                className="spotify-bttn">
+                <p className="spotify">SEE ON SPOTIFY</p>

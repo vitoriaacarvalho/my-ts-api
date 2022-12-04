@@ -3,17 +3,18 @@ import React from 'react';
 import axios from 'axios';
 
 
+
 function Quotes() {
-  const[song,setSong]= React.useState([]);
+  const[songs,setSong]= React.useState([]);
 
   React.useEffect(()=>{
     axios.get("http://localhost:8080/songs").then((response)=>{
-      console.log(response.data);
+     setSong(response.data);
     });
   }, []);
-  if (!song) return null;
+  if (!songs) return null;
 
-  const songName= song.map((song, index) => {
+  const songName= songs.map((song, index) => {
     return(
       <>
       <div className='thebox'>
@@ -24,16 +25,10 @@ function Quotes() {
       </>
     )
   });
-  const song_url=song.map((song,index)=> {
-    return(
-      <p className="link">{song.songUrl}</p>
-    )
-  });
 
- function getRandomInt(max) {
+  function getRandomInt(max) {
       return Math.floor(Math.random() * max);
-}
-
+  };
   return (
     <>
       <main className="central-div">
@@ -47,9 +42,14 @@ function Quotes() {
                 <a href="/recommendations" className="recommendations-bttn">
                   <p className="recommendations">RECOMMENDATIONS</p>
                 </a>
-                <a href={song_url} className="spotify-bttn">
-                  <p className="spotify">SEE ON SPOTIFY</p>
-                </a>
+                {songs.map((song,index) => {
+                  return(
+                    <>
+                         <a className="link" href={song.songUrl}>SEE ON SPOTIFY</a>
+                    </>
+                  )})}
+                  
+                
       </main>
     </> 
   );

@@ -1,9 +1,11 @@
 import './Home.css';
 import Quotes from '../quotes/Quotes.js'
 import Recommend from '../recommend/Recommend.js'
-import api from '../../Utils/Api';
+import api from '../../Utils/Api'; 
+
 function Home() {
   return (
+    
      <div className="all-page">    
              <main className="central-div">
                 <h2>Taylor's Songs</h2>
