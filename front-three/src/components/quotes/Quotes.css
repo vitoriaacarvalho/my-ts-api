@@ -71,11 +71,16 @@ main {
     margin-left: 50px;
     font-size: medium;
     margin-top: 23px;
+    margin-left: 47px;
+    font-size:18px;
+    color: #6e1e679b;
 }
 .recommendations{
     margin-top: 23px;
     margin-left: 3px;
     font-size: medium;
+    font-size:16px;
+    color: #6e1e679b;
 }
 .thebox{
     background-color:  #f7c3dc00;
@@ -96,6 +101,7 @@ main {
     white-space: 10px;
     color: #6e1e679b;
     width:70%;
+    font-size:20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .h3{
